@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400d70422732246869e2f032d9ebfc9f, type: 3}
+  m_Name: "Produtora_Merm\xE3o"
+  m_EditorClassIdentifier: 
+  code: "produtora_merm\xE3o"
+  unitName: "Produtora Merm\xE3o"
+  description: 
+  healthpoints: 500
+  prefab: {fileID: 4893885829384556338, guid: 1110fdec0488bdd419c3ee4ea6ad4891, type: 3}
+  sprite: {fileID: 0}
+  cost:
+  - code: 0
+    amount: 400
+  canProduce: 00000000
+  skills:
+  - {fileID: 11400000, guid: 8365cdf4d783a984b8dd2c74be5598e9, type: 2}
+  - {fileID: 11400000, guid: 3bad7f6f252b95b4a88b42a2f0bfbd9d, type: 2}
+  - {fileID: 11400000, guid: f216ccd0d9cf4b743affe43ad3918c19, type: 2}
+  - {fileID: 11400000, guid: e6da1de1dea98f84a904d820c4f47619, type: 2}
+  fieldOfView: 40
+  attackRange: 0
+  attackDamage: 0
+  attackRate: 0
+  onSelectSound: {fileID: 0}
+  ambientSound: {fileID: 0}
+  constructionMeshes:
+  - {fileID: -4252228335409972894, guid: 668c78909037a4025b3debb3acdb213e, type: 3}
+  - {fileID: -7756893256904936357, guid: 63fd3fecfe08747c7a08d9c990b44b0f, type: 3}
+  - {fileID: 6372168373158155345, guid: 1e55a9fd12d8c6b4c9b2fb553b04b262, type: 3}

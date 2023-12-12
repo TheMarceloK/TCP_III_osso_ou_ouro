@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400d70422732246869e2f032d9ebfc9f, type: 3}
+  m_Name: Doca_Danabas
+  m_EditorClassIdentifier: 
+  code: doca_danabas
+  unitName: Doca Danabas
+  description: 
+  healthpoints: 500
+  prefab: {fileID: 4893885829384556338, guid: 6b4aa801c69e60844a34a7c27885d3d7, type: 3}
+  sprite: {fileID: 0}
+  cost:
+  - code: 0
+    amount: 300
+  canProduce: 
+  skills:
+  - {fileID: 11400000, guid: a23f5b8f6bf717f4b809bb73cd6e915e, type: 2}
+  fieldOfView: 40
+  attackRange: 0
+  attackDamage: 0
+  attackRate: 0
+  onSelectSound: {fileID: 0}
+  ambientSound: {fileID: 0}
+  constructionMeshes:
+  - {fileID: -4252228335409972894, guid: 668c78909037a4025b3debb3acdb213e, type: 3}
+  - {fileID: -7756893256904936357, guid: 63fd3fecfe08747c7a08d9c990b44b0f, type: 3}
+  - {fileID: 6372168373158155345, guid: bbd823e3633b98b40854da69c15e8abf, type: 3}
