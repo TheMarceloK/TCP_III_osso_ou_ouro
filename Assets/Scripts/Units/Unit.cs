@@ -2,6 +2,7 @@
 using System.Linq;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UIElements;
 
 public struct UnitLevelUpData
 {
@@ -66,7 +67,6 @@ public class Unit
         GameObject g = PhotonNetwork.Instantiate(data.prefab.name,Vector3.zero,Quaternion.identity) as GameObject;
          
         _transform = g.transform;
-        _transform.GetComponent<UnitManager>().SetOwnerMaterial(owner);
         _transform.GetComponent<PhotonView>();
         
 
@@ -79,7 +79,12 @@ public class Unit
             _skillManagers.Add(sm);
         }
 
+        //g.GetComponent<PlayerController>().PV.RPC("Initialize", RpcTarget.AllBuffered, owner, this);
+        //g.GetComponent<PlayerController>().Initialize(owner, (Building) this);
+        Debug.Log(Code);
+        _transform.GetComponent<UnitManager>().PV.RPC("SetOwnerMaterial",RpcTarget.AllBuffered,owner);
         _transform.GetComponent<UnitManager>().Initialize(this);
+        _transform.GetComponent<UnitManager>().PV.RPC("RPCInitialize", RpcTarget.AllBuffered);
 
 
         

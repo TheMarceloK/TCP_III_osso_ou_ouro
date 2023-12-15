@@ -45,7 +45,7 @@ public class SkillData : ScriptableObject
                     c.ComputeProduction();
                     Debug.Log(instantiationPosition);
                     Debug.Log(source);
-                    c.playerController.PV.RPC("SetPosition", RpcTarget.AllBuffered, instantiationPosition);
+                    c.playerController.PV.RPC("SetPositionCaracter", RpcTarget.AllBuffered, instantiationPosition);
                     //c.Transform.GetComponent<NavMeshAgent>().Warp(instantiationPosition);
                 }
                 break;

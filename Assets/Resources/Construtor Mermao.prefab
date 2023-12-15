@@ -140,6 +140,7 @@ MonoBehaviour:
   meshRenderer: {fileID: 3685788692888484186}
   contextualSource: {fileID: 7928814290623769016}
   animator: {fileID: 0}
+  PV: {fileID: 0}
   ownerMaterialSlotIndex: 4
   healthbar: {fileID: 3511869268192224758}
   agent: {fileID: 2810587783769693676}
@@ -320,7 +321,9 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 2876063312457141707}
+  - {fileID: 793821395445695682}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

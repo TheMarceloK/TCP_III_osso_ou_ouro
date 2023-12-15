@@ -47,6 +47,10 @@ MonoBehaviour:
   - teste
   - TriggerSkill
   - SetPosition
+  - SetPositionCaracter
+  - Initialize
+  - SetOwnerMaterial
+  - RPCInitialize
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

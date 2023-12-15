@@ -45,6 +45,8 @@ public class UnitManager : MonoBehaviour
 
     private void Awake()
     {
+        PV = GetComponent<PhotonView>();
+        Debug.Log(PV);
         _meshSize = meshRenderer.GetComponent<Renderer>().bounds.size / 2;
 
         if (healthbar)
@@ -62,12 +64,17 @@ public class UnitManager : MonoBehaviour
             Input.GetKey(KeyCode.RightShift)
         );
     }
-
+    //[PunRPC]
     public void Initialize(Unit unit)
     {
-        _collider = GetComponent<BoxCollider>();
         Unit = unit;
         unit.playerController = FindObjectOfType<PlayerController>();
+    }
+
+    [PunRPC]
+    public void RPCInitialize()
+    {
+        _collider = GetComponent<BoxCollider>();
     }
 
     public void EnableFOV(float size)
@@ -78,6 +85,7 @@ public class UnitManager : MonoBehaviour
         StartCoroutine(_ScalingFOV(size));
     }
 
+    [PunRPC]
     public void SetOwnerMaterial(int owner)
     {
         Color playerColor = GameManager.instance.gamePlayersParameters.players[owner].color;

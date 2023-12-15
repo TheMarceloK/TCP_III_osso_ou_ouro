@@ -554,6 +554,7 @@ public class UIManager : MonoBehaviour
         // if there is another unit of the same type already selected,
         // increase the counter
         Transform alreadyInstantiatedChild = selectedUnitsListParent.Find(unit.Code);
+        Debug.Log(alreadyInstantiatedChild);
         if (alreadyInstantiatedChild != null)
         {
             Text t = alreadyInstantiatedChild.Find("Count").GetComponent<Text>();

@@ -3,8 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
+using static UnityEngine.UI.GridLayoutGroup;
+using UnityEngine.UIElements;
 
-public class PlayerController : MonoBehaviourPunCallbacks//, IPunObservable
+public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
 {
     [SerializeField]
     //GameObject cameraHolder;
@@ -23,10 +26,10 @@ public class PlayerController : MonoBehaviourPunCallbacks//, IPunObservable
 
     public PhotonView PV;
     Unit g;
-    //public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    //{
-    //    throw new System.NotImplementedException();
-    //}
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        //throw new System.NotImplementedException();
+    }
 
     private void Awake()
     {
@@ -34,17 +37,7 @@ public class PlayerController : MonoBehaviourPunCallbacks//, IPunObservable
         PV = GetComponent<PhotonView>();
 
     }
-    public void TriggerSkill(Unit caller, int index, GameObject target = null)
-    {
-        //Debug.Log(caller);
-        //caller.PV.RPC("RPCTriggerSkill", RpcTarget.All, index, target);
-        PV.RPC("teste", RpcTarget.All);
-    }
-    [PunRPC]
-    public void teste()
-    {
-        Debug.Log("teste");
-    }
+   
     private void Start()
     {
         // rb = GetComponent<Rigidbody>();
@@ -63,7 +56,21 @@ public class PlayerController : MonoBehaviourPunCallbacks//, IPunObservable
     public void SetPosition(Vector3 position)
     {
         //if (PV.IsMine)
+        
         transform.position = position;
+    }
+    //[PunRPC]
+    //public void Initialize(int owner, Building unit)
+    //{
+    //    //if (PV.IsMine)
+    //    GetComponent<UnitManager>().SetOwnerMaterial(owner);
+    //    GetComponent<UnitManager>().Initialize(unit);
+    //}
+    [PunRPC]
+    public void SetPositionCaracter(Vector3 position)
+    {
+        //if (PV.IsMine)
+        GetComponent<NavMeshAgent>().Warp(position);
     }
 
     private void Update()

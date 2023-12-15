@@ -11,7 +11,7 @@ public class BuildingManager : UnitManager
     public override Unit Unit
     {
         get { return _building; }
-        set { _building = value is Building ? (Building)value : null; }
+        set { _building = value is Building ? (Building)value : null; } // talvez seja por aqui o erro, pq não tá idenficando o building. provavelmente tem que fazer isso aqui ser setado pelo RPC
     }
     private int _nCollisions = 0;
 
