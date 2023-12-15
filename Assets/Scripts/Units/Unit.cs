@@ -41,8 +41,8 @@ public class Unit
     protected int _owner;
     protected int _attackDamage;
     protected float _attackRange;
-    public PhotonView PV;
-    public PlayerManager playerController;
+    
+    public PlayerController playerController;
     
 
     public Unit(UnitData data, int owner) : this(data, owner, new List<ResourceValue>() { }) { }
@@ -61,11 +61,14 @@ public class Unit
             TechnologyNodeActioners.GetMultiplier("attack_booster"));
         _attackRange = data.attackRange;
         
-        GameObject g = GameObject.Instantiate(data.prefab) as GameObject;
+        
+        //GameObject g = GameObject.Instantiate(data.prefab) as GameObject;
+        GameObject g = PhotonNetwork.Instantiate(data.prefab.name,Vector3.zero,Quaternion.identity) as GameObject;
          
         _transform = g.transform;
         _transform.GetComponent<UnitManager>().SetOwnerMaterial(owner);
         _transform.GetComponent<PhotonView>();
+        
 
         _skillManagers = new List<SkillManager>();
         SkillManager sm;
@@ -99,10 +102,13 @@ public class Unit
         UNITS_BY_OWNER[_owner].Add(this);
     }
 
-    public void SetPosition(Vector3 position)
-    {
-        _transform.position = position;
-    }
+    //[PunRPC]
+    //public void SetPosition( int x, int y, int z)
+    //{
+    //    if(PV.IsMine)
+    //    _transform.position = new Vector3(x,y,z);
+        
+    //}
 
     public void SetAttackDamage(int dmg)
     {

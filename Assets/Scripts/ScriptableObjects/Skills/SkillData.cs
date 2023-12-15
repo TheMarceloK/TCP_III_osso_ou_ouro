@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using Photon.Pun;
+using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public enum SkillType
 {
@@ -41,7 +43,10 @@ public class SkillData : ScriptableObject
                         return;
                     Character c = new Character(d, sourceUnitManager.Unit.Owner);
                     c.ComputeProduction();
-                    c.Transform.GetComponent<NavMeshAgent>().Warp(instantiationPosition);
+                    Debug.Log(instantiationPosition);
+                    Debug.Log(source);
+                    c.playerController.PV.RPC("SetPosition", RpcTarget.AllBuffered, instantiationPosition);
+                    //c.Transform.GetComponent<NavMeshAgent>().Warp(instantiationPosition);
                 }
                 break;
             case SkillType.INSTANTIATE_BUILDING:
@@ -53,16 +58,16 @@ public class SkillData : ScriptableObject
                         (BuildingData) unitReference, sourceUnitManager);
                 }
                 break;
-            case SkillType.COLECT_RESOURCES:
-                {
-                    UnitManager sourceUnitManager = source.GetComponent<UnitManager>();
-                    if (sourceUnitManager == null)
-                        return;
-                    BuildingPlacer.instance.SelectPlacedBuilding(
-                        (BuildingData)unitReference, sourceUnitManager);
+            //case SkillType.COLECT_RESOURCES:
+            //    {
+            //        UnitManager sourceUnitManager = source.GetComponent<UnitManager>();
+            //        if (sourceUnitManager == null)
+            //            return;
+            //        BuildingPlacer.instance.SelectPlacedBuilding(
+            //            (BuildingData)unitReference, sourceUnitManager);
 
-                }
-                break;
+            //    }
+                //break;
             default:
                 break;
         }

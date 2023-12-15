@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Photon.Pun;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
@@ -101,7 +102,7 @@ public class DataHandler : MonoBehaviour
                         .Where((BuildingData x) => x.code == unit.code)
                         .First();
                     u = new Building(bd, p, production);
-                    u.SetPosition(unit.position);
+                    u.playerController.PV.RPC("SetPosition", RpcTarget.AllBuffered, unit.position);
                     u.Place(true);
                     ((Building)u).SetConstructionHP(unit.constructionHP, true);
                 }

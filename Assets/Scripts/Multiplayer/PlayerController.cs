@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviourPunCallbacks//, IPunObservable
 {
     [SerializeField]
     //GameObject cameraHolder;
@@ -19,10 +19,14 @@ public class PlayerController : MonoBehaviour
 
 
     //Rigidbody rb;
-    
-    
-    PhotonView PV;
+
+
+    public PhotonView PV;
     Unit g;
+    //public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    //{
+    //    throw new System.NotImplementedException();
+    //}
 
     private void Awake()
     {
@@ -44,24 +48,31 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         // rb = GetComponent<Rigidbody>();
-       
+
         if (!PV.IsMine && gameObject.tag == "MainCamera")
         {
             Destroy(GetComponent<Camera>().gameObject);
             //Destroy(rb);
             return;
         }
-       
 
+
+    }
+
+    [PunRPC]
+    public void SetPosition(Vector3 position)
+    {
+        //if (PV.IsMine)
+        transform.position = position;
     }
 
     private void Update()
     {
-        if(!PV.IsMine) return;
+        if (!PV.IsMine) return;
         //Look();
         //Move();
         //Jump();
-      
+
     }
 
     //void Look()
@@ -99,4 +110,6 @@ public class PlayerController : MonoBehaviour
         if (!PV.IsMine) return;
         //rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
     }
+
+
 }

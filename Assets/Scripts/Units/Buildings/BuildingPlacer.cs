@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Photon.Pun;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -13,7 +14,7 @@ public class BuildingPlacer : MonoBehaviour
     private Vector3 _lastPlacementPosition;
 
     private UnitManager _builderManager;
-    
+
 
     private void Start()
     {
@@ -25,18 +26,12 @@ public class BuildingPlacer : MonoBehaviour
         {
             Transform spawnpoints = GameObject.Find("Spawnpoints").transform;
 
-            BuildingData[] initialBuilding = GameManager.instance.gameGlobalParameters.initialBuildings ;
+            BuildingData[] initialBuilding = GameManager.instance.gameGlobalParameters.initialBuildings;
             GamePlayersParameters p = GameManager.instance.gamePlayersParameters;
             Vector3 pos;
-            for (int i = 0; i < p.players.Length; i++)
-            {
-
-                pos = spawnpoints.GetChild(i).position;
-                SpawnBuilding(initialBuilding[Laucher.Instance.facção], i, pos);
-                if (i == p.myPlayerId)
-                    Camera.main.GetComponent<CameraManager>().SetPosition(pos); 
-                
-            }
+            pos = spawnpoints.GetChild(p.myPlayerId).position;
+            SpawnBuilding(initialBuilding[Laucher.Instance.faccao], p.myPlayerId, pos);
+            Camera.main.GetComponent<CameraManager>().SetPosition(pos);
         }
     }
 
@@ -60,7 +55,7 @@ public class BuildingPlacer : MonoBehaviour
                 Globals.TERRAIN_LAYER_MASK
             ))
             {
-                _placedBuilding.SetPosition(_raycastHit.point);
+                _placedBuilding.playerController.PV.RPC("SetPosition", RpcTarget.AllBuffered, _raycastHit.point);
                 if (_lastPlacementPosition != _raycastHit.point)
                 {
                     _placedBuilding.CheckValidPlacement();
@@ -139,7 +134,7 @@ public class BuildingPlacer : MonoBehaviour
 
         // instantiate building
         _placedBuilding = new Building(data, owner, production);
-        _placedBuilding.SetPosition(position);
+        _placedBuilding.playerController.PV.RPC("SetPosition", RpcTarget.AllBuffered, position);
         // finish up the placement
         _PlaceBuilding(false);
         _placedBuilding.SetConstructionHP(_placedBuilding.MaxHP);

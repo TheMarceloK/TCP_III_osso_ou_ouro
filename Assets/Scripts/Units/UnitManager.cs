@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,6 +22,7 @@ public class UnitManager : MonoBehaviour
     public Renderer meshRenderer;
     public AudioSource contextualSource;
     public Animator animator;
+    public PhotonView PV;
 
     public int ownerMaterialSlotIndex = 0;
 
@@ -65,7 +67,7 @@ public class UnitManager : MonoBehaviour
     {
         _collider = GetComponent<BoxCollider>();
         Unit = unit;
-        unit.playerController = FindObjectOfType<PlayerManager>();
+        unit.playerController = FindObjectOfType<PlayerController>();
     }
 
     public void EnableFOV(float size)

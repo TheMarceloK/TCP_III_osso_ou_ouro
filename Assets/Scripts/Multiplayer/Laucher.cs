@@ -40,7 +40,7 @@ public class Laucher : MonoBehaviourPunCallbacks
     private Dictionary<int, PlayerData> _playersData;
     bool entrou = false;
     Player[] players ;
-    public int facção;
+    public int faccao;
 
     [SerializeField]
     private GameObject _rooomMenu;
@@ -78,8 +78,8 @@ public class Laucher : MonoBehaviourPunCallbacks
     {
         EventManager.TriggerEvent("LoadedScene");
         //PhotonNetwork.ConnectUsingSettings();
-        facção = Random.Range(0, 3);
-        Debug.Log(facção);
+        faccao = Random.Range(0, 3);
+        Debug.Log(faccao);
     }
 
     private void Update()
@@ -92,7 +92,7 @@ public class Laucher : MonoBehaviourPunCallbacks
         {
             for (int i = 0; i < players.Length; i++)
             {
-                _playersData[i] = new PlayerData(players[i].NickName, _playerColors[i], players[i],facção);
+                _playersData[i] = new PlayerData(players[i].NickName, _playerColors[i], players[i],faccao);
             }
         }
     }
