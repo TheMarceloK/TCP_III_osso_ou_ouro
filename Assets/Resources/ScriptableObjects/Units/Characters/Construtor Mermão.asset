@@ -23,10 +23,11 @@ MonoBehaviour:
     amount: 20
   canProduce: 
   skills:
-  - {fileID: 11400000, guid: f7fe56d9a25855946b74519917da8ec3, type: 2}
-  - {fileID: 11400000, guid: 28e932d599d38284aa6a7dce6aea2827, type: 2}
-  - {fileID: 11400000, guid: c57dc8dd7a60e284e9f5cb6a7eceaff4, type: 2}
-  - {fileID: 11400000, guid: 40421e52811f70e4cbe56592521e5a91, type: 2}
+  - {fileID: 11400000, guid: 37901311563a00649a4115a43298e175, type: 2}
+  - {fileID: 11400000, guid: 909c3c7109262de41b22c6c68d5f4466, type: 2}
+  - {fileID: 11400000, guid: cabb8845045599843a2e735638221106, type: 2}
+  - {fileID: 11400000, guid: b8b242fdb7a76a84f9e8125bf0987468, type: 2}
+  - {fileID: 11400000, guid: bf0e88075ca62384295ad91b74f3e081, type: 2}
   fieldOfView: 18
   attackRange: 2
   attackDamage: 2
