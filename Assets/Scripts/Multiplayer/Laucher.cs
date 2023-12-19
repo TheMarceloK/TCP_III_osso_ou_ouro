@@ -52,6 +52,8 @@ public class Laucher : MonoBehaviourPunCallbacks
     private GameObject _encontrarSalaTela;
     [SerializeField]
     private GameObject _menuentrada;
+    [SerializeField]
+    private GameObject _panelClasse;
 
     private static readonly Color[] _playerColors = new Color[]
     {
@@ -187,6 +189,16 @@ public class Laucher : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRoom(info.Name);
         MenuManager.Instance.OpenMenu("room");
         
+    }
+
+    public void AbrirEscolhaClasse()
+    {
+        _panelClasse.SetActive(true);
+    }
+
+    public void FecharEscolhaClasse()
+    {
+        _panelClasse.SetActive(false);
     }
 
     public void EscolherFaccao(int faccao)

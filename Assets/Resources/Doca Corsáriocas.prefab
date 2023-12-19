@@ -141,6 +141,7 @@ MonoBehaviour:
   meshRenderer: {fileID: 8684994183107880267}
   contextualSource: {fileID: -2031709788381366338}
   animator: {fileID: 0}
+  PV: {fileID: 0}
   ownerMaterialSlotIndex: 4
   healthbar: {fileID: 8329912913882405219}
   ambientSource: {fileID: -2194822987851611251}
@@ -441,12 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21672d23f978b04c8431ad167b4678e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraHolder: {fileID: 0}
-  mouseSensitivity: 0
-  sprintSpeed: 0
-  walkSpeed: 0
-  jumpForce: 0
-  smoothTime: 0
+  PV: {fileID: 0}
 --- !u!114 &5513982441575595595
 MonoBehaviour:
   m_ObjectHideFlags: 0
