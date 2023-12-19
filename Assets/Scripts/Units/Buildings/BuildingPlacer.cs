@@ -152,7 +152,7 @@ public class BuildingPlacer : MonoBehaviour
         // destroy the previous "phantom" if there is one
         if (_placedBuilding != null && !_placedBuilding.IsFixed)
         {
-            Destroy(_placedBuilding.Transform.gameObject);
+            PhotonNetwork.Destroy(_placedBuilding.Transform.gameObject);
         }
         Building building = new Building(
             buildingData,
@@ -166,7 +166,7 @@ public class BuildingPlacer : MonoBehaviour
     void _CancelPlacedBuilding()
     {
         // destroy the "phantom" building
-        Destroy(_placedBuilding.Transform.gameObject);
+        PhotonNetwork.Destroy(_placedBuilding.Transform.gameObject);
         _placedBuilding = null;
         EventManager.TriggerEvent("PlaceBuildingOff");
     }

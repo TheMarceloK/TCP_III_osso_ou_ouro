@@ -201,7 +201,7 @@ public class UnitManager : MonoBehaviour
     {
         if (_selected)
             Deselect();
-        Destroy(gameObject);
+        PhotonNetwork.Destroy(gameObject);
     }
 
     protected virtual void UpdateHealthbar()

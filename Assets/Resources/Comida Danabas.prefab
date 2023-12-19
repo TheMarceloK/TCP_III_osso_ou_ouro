@@ -141,10 +141,10 @@ MonoBehaviour:
   meshRenderer: {fileID: 6046616050468816230}
   contextualSource: {fileID: -2031709788381366338}
   animator: {fileID: 0}
+  PV: {fileID: 0}
   ownerMaterialSlotIndex: 2
   healthbar: {fileID: 8329912913882405219}
   ambientSource: {fileID: -2194822987851611251}
-  PV: {fileID: 0}
 --- !u!114 &7464599100056999015
 MonoBehaviour:
   m_ObjectHideFlags: 0
