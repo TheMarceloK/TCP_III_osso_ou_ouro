@@ -189,7 +189,7 @@ public class Laucher : MonoBehaviourPunCallbacks
         
     }
 
-    public void escolherfaccao(int faccao)
+    public void EscolherFaccao(int faccao)
     {
         Faccao = faccao;
     }
