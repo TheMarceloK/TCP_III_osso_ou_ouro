@@ -30,7 +30,7 @@ public class BuildingPlacer : MonoBehaviour
             GamePlayersParameters p = GameManager.instance.gamePlayersParameters;
             Vector3 pos;
             pos = spawnpoints.GetChild(p.myPlayerId).position;
-            SpawnBuilding(initialBuilding[Laucher.Instance.faccao], p.myPlayerId, pos);
+            SpawnBuilding(initialBuilding[Laucher.Instance.Faccao], p.myPlayerId, pos);
             Camera.main.GetComponent<CameraManager>().SetPosition(pos);
         }
     }

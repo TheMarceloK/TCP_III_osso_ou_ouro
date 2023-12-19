@@ -178,10 +178,12 @@ public class UnitManager : MonoBehaviour
     {
         // abort if not active
         if (!IsActive()) return;
+        Debug.Log(IsActive());
         // abort if already selected
         if (Globals.SELECTED_UNITS.Contains(this)) return;
 
         Globals.SELECTED_UNITS.Add(this);
+        Debug.Log(Globals.SELECTED_UNITS.Count);
         EventManager.TriggerEvent("SelectedUnit", Unit);
         selectionCircle.SetActive(true);
         if (healthbar)

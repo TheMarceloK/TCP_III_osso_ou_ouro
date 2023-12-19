@@ -39,8 +39,8 @@ public class Laucher : MonoBehaviourPunCallbacks
     GamePlayersParameters gamePlayersParameters;
     private Dictionary<int, PlayerData> _playersData;
     bool entrou = false;
-    Player[] players ;
-    public int faccao;
+    Player[] players;
+    public int Faccao;
 
     [SerializeField]
     private GameObject _rooomMenu;
@@ -78,8 +78,8 @@ public class Laucher : MonoBehaviourPunCallbacks
     {
         EventManager.TriggerEvent("LoadedScene");
         //PhotonNetwork.ConnectUsingSettings();
-        faccao = Random.Range(0, 3);
-        Debug.Log(faccao);
+        Faccao = Random.Range(0, 3);
+        Debug.Log(Faccao);
     }
 
     private void Update()
@@ -92,7 +92,7 @@ public class Laucher : MonoBehaviourPunCallbacks
         {
             for (int i = 0; i < players.Length; i++)
             {
-                _playersData[i] = new PlayerData(players[i].NickName, _playerColors[i], players[i],faccao);
+                _playersData[i] = new PlayerData(players[i].NickName, _playerColors[i], players[i],Faccao);
             }
         }
     }
@@ -187,6 +187,11 @@ public class Laucher : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRoom(info.Name);
         MenuManager.Instance.OpenMenu("room");
         
+    }
+
+    public void escolherfaccao(int faccao)
+    {
+        Faccao = faccao;
     }
 
     public void AbrirOpcoes()
