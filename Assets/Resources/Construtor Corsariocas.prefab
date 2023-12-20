@@ -140,7 +140,7 @@ MonoBehaviour:
   fov: {fileID: 2773615677517416114}
   meshRenderer: {fileID: 4974466418225939764}
   contextualSource: {fileID: 7928814290623769016}
-  animator: {fileID: 0}
+  animator: {fileID: -6702240348443897789}
   PV: {fileID: 0}
   ownerMaterialSlotIndex: 0
   healthbar: {fileID: 3511869268192224758}
