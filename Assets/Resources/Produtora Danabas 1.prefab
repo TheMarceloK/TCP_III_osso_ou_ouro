@@ -85,7 +85,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4893885829384556338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1548516994056659404}
@@ -106,8 +106,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 2, z: 4}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 6, y: 6, z: 6}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &-2483795602481616415
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -141,10 +141,10 @@ MonoBehaviour:
   meshRenderer: {fileID: 375589722174053027}
   contextualSource: {fileID: -2031709788381366338}
   animator: {fileID: 0}
+  PV: {fileID: 0}
   ownerMaterialSlotIndex: 0
   healthbar: {fileID: 8329912913882405219}
   ambientSource: {fileID: -2194822987851611251}
-  PV: {fileID: 0}
 --- !u!114 &7464599100056999015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,7 +426,10 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 2098154806766166388}
+  - {fileID: -6643526747647447021}
+  - {fileID: 98045418630948006}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -474,12 +477,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 19a119a875bb2694e888b885c2af832d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5691092
+      value: -3.06
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19a119a875bb2694e888b885c2af832d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0962924
+      value: 1.51
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19a119a875bb2694e888b885c2af832d,
         type: 3}
@@ -571,7 +574,7 @@ PrefabInstance:
     - target: {fileID: 6152464606502787667, guid: e4002488d57214b618e5d14c4dd2c16f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 6.05
       objectReference: {fileID: 0}
     - target: {fileID: 6152464606502787667, guid: e4002488d57214b618e5d14c4dd2c16f,
         type: 3}
@@ -647,7 +650,7 @@ PrefabInstance:
     - target: {fileID: 4666370122340444421, guid: 797fa95e72c56e64aa1191008ac5d8d8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5691092
+      value: 2.98
       objectReference: {fileID: 0}
     - target: {fileID: 4666370122340444421, guid: 797fa95e72c56e64aa1191008ac5d8d8,
         type: 3}
@@ -657,7 +660,7 @@ PrefabInstance:
     - target: {fileID: 4666370122340444421, guid: 797fa95e72c56e64aa1191008ac5d8d8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.0962925
+      value: 7.29
       objectReference: {fileID: 0}
     - target: {fileID: 4666370122340444421, guid: 797fa95e72c56e64aa1191008ac5d8d8,
         type: 3}
@@ -696,6 +699,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 797fa95e72c56e64aa1191008ac5d8d8, type: 3}
+--- !u!114 &98045418630948006 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6905335471407808432, guid: 797fa95e72c56e64aa1191008ac5d8d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6811973504472226582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8453126532206133517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -762,6 +777,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FOV
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379897653043113606, guid: 27ddadfce77ff44b0a7335bc76b87b4b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27ddadfce77ff44b0a7335bc76b87b4b, type: 3}
