@@ -45,7 +45,7 @@ public class CheckUnitInRange : Node
         {
             Parent.ClearData("currentTarget");
             Parent.ClearData("currentTargetOffset");
-            _manager.SetAnimatorBoolVariable("Running", false);
+            _manager.SetAnimatorBoolVariable("Andando", false);
             _manager.SetAnimatorBoolVariable("Attacking", false);
             _state = NodeState.FAILURE;
             return _state;
@@ -85,7 +85,7 @@ public class CheckUnitInRange : Node
                 {
                     Parent.ClearData("currentTarget");
                     Parent.ClearData("currentTargetOffset");
-                    _manager.SetAnimatorBoolVariable("Running", false);
+                    _manager.SetAnimatorBoolVariable("Andando", false);
                     _manager.SetAnimatorBoolVariable("Attacking", false);
                     _state = NodeState.FAILURE;
                     return _state;

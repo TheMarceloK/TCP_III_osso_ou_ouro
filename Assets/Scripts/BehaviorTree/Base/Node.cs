@@ -4,7 +4,7 @@ namespace BehaviorTree
 {
     public enum NodeState
     {
-        RUNNING,
+        Andando,
         SUCCESS,
         FAILURE
     }

@@ -36,4 +36,4 @@ MonoBehaviour:
   constructionMeshes:
   - {fileID: -4252228335409972894, guid: 668c78909037a4025b3debb3acdb213e, type: 3}
   - {fileID: -7756893256904936357, guid: 63fd3fecfe08747c7a08d9c990b44b0f, type: 3}
-  - {fileID: 6372168373158155345, guid: 1e55a9fd12d8c6b4c9b2fb553b04b262, type: 3}
+  - {fileID: 6372168373158155345, guid: 19a119a875bb2694e888b885c2af832d, type: 3}

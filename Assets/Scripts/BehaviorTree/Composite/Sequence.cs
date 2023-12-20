@@ -37,7 +37,7 @@ namespace BehaviorTree
                         return _state;
                     case NodeState.SUCCESS:
                         continue;
-                    case NodeState.RUNNING:
+                    case NodeState.Andando:
                         anyChildIsRunning = true;
                         continue;
                     default:
@@ -45,7 +45,7 @@ namespace BehaviorTree
                         return _state;
                 }
             }
-            _state = anyChildIsRunning ? NodeState.RUNNING : NodeState.SUCCESS;
+            _state = anyChildIsRunning ? NodeState.Andando : NodeState.SUCCESS;
             return _state;
         }
     }

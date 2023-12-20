@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
 
     //Rigidbody rb;
 
-
     public PhotonView PV;
     Unit g;
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

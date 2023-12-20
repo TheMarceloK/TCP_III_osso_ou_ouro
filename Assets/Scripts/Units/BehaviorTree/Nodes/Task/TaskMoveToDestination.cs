@@ -20,7 +20,7 @@ public class TaskMoveToDestination : Node
         if (Vector3.Distance(destination, _manager.agent.destination) > 0.2f)
         {
             bool canMove = _manager.MoveTo(destination);
-            _state = canMove ? NodeState.RUNNING : NodeState.FAILURE;
+            _state = canMove ? NodeState.Andando : NodeState.FAILURE;
             return _state;
         }
 
@@ -29,12 +29,12 @@ public class TaskMoveToDestination : Node
         if (d <= _manager.agent.stoppingDistance)
         {
             ClearData("destinationPoint");
-            _manager.SetAnimatorBoolVariable("Running", false);
+            _manager.SetAnimatorBoolVariable("Andando", false);
             _state = NodeState.SUCCESS;
             return _state;
         }
 
-        _state = NodeState.RUNNING;
+        _state = NodeState.Andando;
         return _state;
     }
 }

@@ -20,8 +20,8 @@ namespace BehaviorTree
                 case NodeState.SUCCESS:
                     _state = NodeState.FAILURE;
                     return _state;
-                case NodeState.RUNNING:
-                    _state = NodeState.RUNNING;
+                case NodeState.Andando:
+                    _state = NodeState.Andando;
                     return _state;
                 default:
                     _state = NodeState.FAILURE;

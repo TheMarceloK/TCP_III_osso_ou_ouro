@@ -132,7 +132,7 @@ public class TaskTrySetDestinationOrTarget : Node
         Parent.Parent.SetData("currentTargetOffset", targetOffsets[i]);
         if (targetTransform != null)
             Parent.Parent.SetData("currentTarget", targetTransform);
-        _manager.SetAnimatorBoolVariable("Running", true);
+        _manager.SetAnimatorBoolVariable("Andando", true);
     }
 
     public void SetFormationTargetPosition(List<Vector3> targetPositions)
@@ -142,6 +142,6 @@ public class TaskTrySetDestinationOrTarget : Node
         ClearData("currentTarget");
         ClearData("currentTargetOffset");
         Parent.Parent.SetData("destinationPoint", targetPositions[i]);
-        _manager.SetAnimatorBoolVariable("Running", true);
+        _manager.SetAnimatorBoolVariable("Andando", true);
     }
 }

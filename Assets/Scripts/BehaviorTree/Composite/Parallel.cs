@@ -22,7 +22,7 @@ namespace BehaviorTree
                         continue;
                     case NodeState.SUCCESS:
                         continue;
-                    case NodeState.RUNNING:
+                    case NodeState.Andando:
                         anyChildIsRunning = true;
                         continue;
                     default:
@@ -33,7 +33,7 @@ namespace BehaviorTree
             if (nFailedChildren == children.Count)
                 _state = NodeState.FAILURE;
             else
-                _state = anyChildIsRunning ? NodeState.RUNNING : NodeState.SUCCESS;
+                _state = anyChildIsRunning ? NodeState.Andando : NodeState.SUCCESS;
             return _state;
         }
     }

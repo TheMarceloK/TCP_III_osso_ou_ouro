@@ -86,7 +86,7 @@ public class TaskFollow : Node
             return _state;
         }
 
-        _state = NodeState.RUNNING;
+        _state = NodeState.Andando;
         return _state;
     }
 

@@ -41,7 +41,7 @@ namespace BehaviorTree
             else
             {
                 _time -= Time.deltaTime;
-                _state = NodeState.RUNNING;
+                _state = NodeState.Andando;
             }
             return _state;
         }

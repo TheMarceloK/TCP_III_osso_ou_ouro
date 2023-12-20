@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 2876063312457141707}
   - component: {fileID: 6853616454147329762}
   - component: {fileID: 7493148848118724774}
+  - component: {fileID: -6702240348443897789}
   m_Layer: 12
   m_Name: Construtor Corsariocas
   m_TagString: Unit
@@ -343,6 +344,25 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!95 &-6702240348443897789
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ce2a455adf38f8e41b308a40aacef64a, type: 3}
+  m_Controller: {fileID: 9100000, guid: 17f21bf25f9fb2a40b4da2ff8b17fece, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &612669497
 PrefabInstance:
   m_ObjectHideFlags: 0
