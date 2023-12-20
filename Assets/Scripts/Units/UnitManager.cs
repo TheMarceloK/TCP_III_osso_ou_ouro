@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.UI.CanvasScaler;
 
 [RequireComponent(typeof(BoxCollider))]
 public class UnitManager : MonoBehaviour
@@ -69,12 +70,14 @@ public class UnitManager : MonoBehaviour
     {
         Unit = unit;
         unit.playerController = FindObjectOfType<PlayerController>();
+        Debug.Log($"{PV}: {Unit}");
     }
 
     [PunRPC]
     public void RPCInitialize()
     {
         _collider = GetComponent<BoxCollider>();
+       
     }
 
     public void EnableFOV(float size)

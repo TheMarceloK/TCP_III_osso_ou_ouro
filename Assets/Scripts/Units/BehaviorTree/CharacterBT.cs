@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 using BehaviorTree;
+using Photon.Pun;
 
 [UnityEngine.RequireComponent(typeof(CharacterManager))]
 public class CharacterBT : Tree
@@ -46,8 +47,8 @@ public class CharacterBT : Tree
 
     public void StopBuildingConstruction()
     {
-        manager.SetRendererVisibility(true);
-        manager.SetIsConstructor(false);
+        manager.PV.RPC("SetRendererVisibility",RpcTarget.All,true);
+        manager.PV.RPC("SetIsConstructor",RpcTarget.All,false);
         _trySetDestinationOrTargetNode.ClearData("currentTarget");
         _trySetDestinationOrTargetNode.ClearData("currentTargetOffset");
     }

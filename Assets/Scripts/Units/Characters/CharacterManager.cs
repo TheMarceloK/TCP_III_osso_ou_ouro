@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Photon.Pun;
 
 public class CharacterManager : UnitManager
 {
@@ -40,7 +41,7 @@ public class CharacterManager : UnitManager
         //    contextualSource.PlayOneShot(((CharacterData)Unit.Data).onMoveValidSound);
         return true;
     }
-
+    [PunRPC]
     public void SetRendererVisibility(bool on)
     {
         if (on && !meshRenderer.enabled)
@@ -54,7 +55,7 @@ public class CharacterManager : UnitManager
             characterCollider.enabled = false;
         }
     }
-
+    [PunRPC]
     public void SetIsConstructor(bool on)
     {
         _isConstructor = on;

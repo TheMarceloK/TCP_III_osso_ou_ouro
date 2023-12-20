@@ -75,11 +75,8 @@ public class GameManager : MonoBehaviour
        
         float p = terrainSize / 2;
 
-        Debug.Log(terrainSize);
         minimapAnchor.position = new Vector3(p, 30, p);
-        Debug.Log(minimapAnchor);
         minimapCamera.orthographicSize = p;
-        Debug.Log(minimapCamera.orthographicSize);
         mapWrapperCollider.center = new Vector3(0, _TERRAIN_MID_HEIGHT, 0);
         mapWrapperCollider.size = new Vector3(b.size.x, 1f, b.size.z);
         minimapScript.terrainSize = Vector2.one * terrainSize;

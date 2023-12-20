@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 using BehaviorTree;
+using Photon.Pun;
 
 public class TaskFollow : Node
 {
@@ -73,8 +74,8 @@ public class TaskFollow : Node
                     )
                     {
                         b.AddConstructor(_manager);
-                        _manager.SetIsConstructor(true);
-                        _manager.SetRendererVisibility(false);
+                        _manager.PV.RPC("SetIsConstructor", RpcTarget.All, true);
+                        _manager.PV.RPC("SetRendererVisibility", RpcTarget.All, false);
                         _manager.agent.Warp(
                             target.position +
                             Quaternion.Euler(0f, Random.Range(0f, 360f), 0f) * Vector3.right * _targetSize * 0.8f);

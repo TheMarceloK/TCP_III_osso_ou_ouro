@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 using BehaviorTree;
+using Photon.Pun;
 
 public class TaskBuild: Node
 {
@@ -20,8 +21,8 @@ public class TaskBuild: Node
         bool finishedBuilding = bm.Build(_buildPower);
         if (finishedBuilding)
         {
-            _manager.SetIsConstructor(false);
-            _manager.SetRendererVisibility(true);
+            _manager.PV.RPC("SetIsConstructor", RpcTarget.All, false);
+            _manager.PV.RPC("SetRendererVisibility", RpcTarget.All, true);
             ClearData("currentTarget");
         }
 

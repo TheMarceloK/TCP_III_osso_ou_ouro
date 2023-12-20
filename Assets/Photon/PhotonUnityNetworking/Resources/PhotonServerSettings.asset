@@ -51,6 +51,8 @@ MonoBehaviour:
   - Initialize
   - SetOwnerMaterial
   - RPCInitialize
+  - SetIsConstructor
+  - SetRendererVisibility
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

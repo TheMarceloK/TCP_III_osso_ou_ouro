@@ -6,8 +6,9 @@ public class BuildingManager : UnitManager
 {
     public AudioSource ambientSource;
     
-    private Building _building;
 
+    private Building _building;
+    
     public override Unit Unit
     {
         get { return _building; }

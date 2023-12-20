@@ -42,7 +42,7 @@ public class Unit
     protected int _owner;
     protected int _attackDamage;
     protected float _attackRange;
-    
+
     public PlayerController playerController;
     
 
@@ -63,6 +63,7 @@ public class Unit
         _attackRange = data.attackRange;
         
         
+        
         //GameObject g = GameObject.Instantiate(data.prefab) as GameObject;
         GameObject g = PhotonNetwork.Instantiate(data.prefab.name,Vector3.zero,Quaternion.identity) as GameObject;
          
@@ -81,13 +82,13 @@ public class Unit
 
         //g.GetComponent<PlayerController>().PV.RPC("Initialize", RpcTarget.AllBuffered, owner, this);
         //g.GetComponent<PlayerController>().Initialize(owner, (Building) this);
-        Debug.Log(Code);
-        _transform.GetComponent<UnitManager>().PV.RPC("SetOwnerMaterial",RpcTarget.AllBuffered,owner);
         _transform.GetComponent<UnitManager>().Initialize(this);
+        _transform.GetComponent<UnitManager>().PV.RPC("SetOwnerMaterial",RpcTarget.AllBuffered,owner);
+        //_transform.GetComponent<UnitManager>().Initialize(this);
         _transform.GetComponent<UnitManager>().PV.RPC("RPCInitialize", RpcTarget.AllBuffered);
-
-
         
+
+
 
 
         // setup minimap icon color with owner color
@@ -107,6 +108,8 @@ public class Unit
         UNITS_BY_OWNER[_owner].Add(this);
     }
 
+    
+    
     //[PunRPC]
     //public void SetPosition( int x, int y, int z)
     //{
@@ -242,10 +245,7 @@ public class Unit
         }
     }
 
-    public void teste()
-    {
-
-    }
+    
     //public void TriggerSkill(int index ,GameObject target = null)
     //{
     //    Debug.Log(playerController);

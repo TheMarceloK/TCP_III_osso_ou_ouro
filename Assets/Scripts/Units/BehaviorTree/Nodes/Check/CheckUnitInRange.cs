@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 using BehaviorTree;
+using Photon.Pun;
 
 public class CheckUnitInRange : Node
 {
@@ -72,8 +73,8 @@ public class CheckUnitInRange : Node
                         if (!cm.IsConstructor)
                         {
                             b.AddConstructor(cm);
-                            cm.SetIsConstructor(true);
-                            cm.SetRendererVisibility(false);
+                            cm.PV.RPC("SetIsConstructor", RpcTarget.All, true);
+                            cm.PV.RPC("SetRendererVisibility", RpcTarget.All, false);
                             cm.agent.Warp(
                                 target.position +
                                 Quaternion.Euler(0f, Random.Range(0f, 360f), 0f) * Vector3.right * _targetSize * 0.8f);
