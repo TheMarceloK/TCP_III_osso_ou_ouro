@@ -140,7 +140,8 @@ MonoBehaviour:
   meshRenderer: {fileID: 7785613835369557065}
   contextualSource: {fileID: 7928814290623769016}
   animator: {fileID: 0}
-  ownerMaterialSlotIndex: 0
+  PV: {fileID: 0}
+  ownerMaterialSlotIndex: 1
   healthbar: {fileID: 3511869268192224758}
   agent: {fileID: 2810587783769693676}
   characterCollider: {fileID: 7861637201734098210}
@@ -301,12 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21672d23f978b04c8431ad167b4678e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraHolder: {fileID: 0}
-  mouseSensitivity: 0
-  sprintSpeed: 0
-  walkSpeed: 0
-  jumpForce: 0
-  smoothTime: 0
+  PV: {fileID: 0}
 --- !u!114 &6853616454147329762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +321,9 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 2876063312457141707}
+  - {fileID: 1236816362011216692}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
