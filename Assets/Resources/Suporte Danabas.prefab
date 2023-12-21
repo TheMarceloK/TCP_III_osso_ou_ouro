@@ -69,6 +69,8 @@ GameObject:
   - component: {fileID: 2876063312457141707}
   - component: {fileID: 6853616454147329762}
   - component: {fileID: 2809551340214599258}
+  - component: {fileID: -4841775702051803356}
+  - component: {fileID: 2270843498960613348}
   m_Layer: 12
   m_Name: Suporte Danabas
   m_TagString: Unit
@@ -139,7 +141,7 @@ MonoBehaviour:
   fov: {fileID: 2773615677517416114}
   meshRenderer: {fileID: 7285850814846103715}
   contextualSource: {fileID: 7928814290623769016}
-  animator: {fileID: 0}
+  animator: {fileID: -4841775702051803356}
   PV: {fileID: 0}
   ownerMaterialSlotIndex: 4
   healthbar: {fileID: 3511869268192224758}
@@ -321,7 +323,9 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 2876063312457141707}
+  - {fileID: 2809551340214599258}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -341,6 +345,41 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!95 &-4841775702051803356
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 51afe93aab9fa7446bb55dd51e8b1bce, type: 3}
+  m_Controller: {fileID: 9100000, guid: dc99454c2a1c4e54898066be19383f46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2270843498960613348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
 --- !u!1001 &612669497
 PrefabInstance:
   m_ObjectHideFlags: 0

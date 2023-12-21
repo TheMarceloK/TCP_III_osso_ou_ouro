@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 6853616454147329762}
   - component: {fileID: 1565366931850758062}
   - component: {fileID: -2082146161726263590}
+  - component: {fileID: -6339190217422871983}
   m_Layer: 12
   m_Name: Construtor Danabas
   m_TagString: Unit
@@ -363,6 +364,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6339190217422871983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
 --- !u!1001 &612669497
 PrefabInstance:
   m_ObjectHideFlags: 0

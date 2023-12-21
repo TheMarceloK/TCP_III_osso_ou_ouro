@@ -69,6 +69,8 @@ GameObject:
   - component: {fileID: 2876063312457141707}
   - component: {fileID: 6853616454147329762}
   - component: {fileID: 7621116904465341515}
+  - component: {fileID: -3834290107292177150}
+  - component: {fileID: 2984815194520246106}
   m_Layer: 12
   m_Name: Suporte Corsariocas
   m_TagString: Unit
@@ -139,7 +141,7 @@ MonoBehaviour:
   fov: {fileID: 2773615677517416114}
   meshRenderer: {fileID: 7291875598352794430}
   contextualSource: {fileID: 7928814290623769016}
-  animator: {fileID: 0}
+  animator: {fileID: -3834290107292177150}
   PV: {fileID: 0}
   ownerMaterialSlotIndex: 4
   healthbar: {fileID: 3511869268192224758}
@@ -321,7 +323,9 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 2876063312457141707}
+  - {fileID: 7621116904465341515}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -341,6 +345,41 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!95 &-3834290107292177150
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: b340b7d922a85364cbbac9009eb59a59, type: 3}
+  m_Controller: {fileID: 9100000, guid: 313a0fe553d068549a582654994c0028, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2984815194520246106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
 --- !u!1001 &612669497
 PrefabInstance:
   m_ObjectHideFlags: 0

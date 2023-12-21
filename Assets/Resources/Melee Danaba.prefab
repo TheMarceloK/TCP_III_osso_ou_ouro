@@ -69,6 +69,8 @@ GameObject:
   - component: {fileID: 2876063312457141707}
   - component: {fileID: 6853616454147329762}
   - component: {fileID: 7894950856647361818}
+  - component: {fileID: 4887942052776751505}
+  - component: {fileID: 2449223442616147792}
   m_Layer: 12
   m_Name: Melee Danaba
   m_TagString: Unit
@@ -139,7 +141,7 @@ MonoBehaviour:
   fov: {fileID: 2773615677517416114}
   meshRenderer: {fileID: 2012844935583995566}
   contextualSource: {fileID: 7928814290623769016}
-  animator: {fileID: 0}
+  animator: {fileID: 4887942052776751505}
   PV: {fileID: 0}
   ownerMaterialSlotIndex: 4
   healthbar: {fileID: 3511869268192224758}
@@ -343,6 +345,41 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!95 &4887942052776751505
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 131278be8f67cab4cbda303a1666c814, type: 3}
+  m_Controller: {fileID: 9100000, guid: 489d47da7c6f7fb4d80a64dbe7faee84, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2449223442616147792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
 --- !u!1001 &612669497
 PrefabInstance:
   m_ObjectHideFlags: 0

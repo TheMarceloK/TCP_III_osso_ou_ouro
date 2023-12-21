@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 6853616454147329762}
   - component: {fileID: 7493148848118724774}
   - component: {fileID: -6702240348443897789}
+  - component: {fileID: 5929846749157767412}
   m_Layer: 12
   m_Name: Construtor Corsariocas
   m_TagString: Unit
@@ -325,6 +326,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 2876063312457141707}
   - {fileID: 7493148848118724774}
+  - {fileID: 5929846749157767412}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -363,6 +365,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5929846749157767412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 2
+    Name: Andando
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1001 &612669497
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -69,6 +69,8 @@ GameObject:
   - component: {fileID: 2876063312457141707}
   - component: {fileID: 6853616454147329762}
   - component: {fileID: -2306180866909969869}
+  - component: {fileID: 4310832570680273362}
+  - component: {fileID: -2473611475184576245}
   m_Layer: 12
   m_Name: Ranged Danabas
   m_TagString: Unit
@@ -139,7 +141,7 @@ MonoBehaviour:
   fov: {fileID: 2773615677517416114}
   meshRenderer: {fileID: 9109372523436044667}
   contextualSource: {fileID: 7928814290623769016}
-  animator: {fileID: 0}
+  animator: {fileID: 4310832570680273362}
   PV: {fileID: 0}
   ownerMaterialSlotIndex: 0
   healthbar: {fileID: 3511869268192224758}
@@ -343,6 +345,41 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!95 &4310832570680273362
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 66e27b21974dacb46973a18aefda5b7b, type: 3}
+  m_Controller: {fileID: 9100000, guid: 686438ce6da0cd846be6bfc81226310a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-2473611475184576245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
 --- !u!1001 &612669497
 PrefabInstance:
   m_ObjectHideFlags: 0

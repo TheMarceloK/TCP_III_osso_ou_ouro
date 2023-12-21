@@ -69,6 +69,8 @@ GameObject:
   - component: {fileID: 2876063312457141707}
   - component: {fileID: 6853616454147329762}
   - component: {fileID: -2314510730240512452}
+  - component: {fileID: -3992355367758337590}
+  - component: {fileID: -5472975588786584665}
   m_Layer: 12
   m_Name: Aquatico Danabas
   m_TagString: Unit
@@ -139,7 +141,8 @@ MonoBehaviour:
   fov: {fileID: 2773615677517416114}
   meshRenderer: {fileID: 5289687777116384928}
   contextualSource: {fileID: 7928814290623769016}
-  animator: {fileID: 0}
+  animator: {fileID: -3992355367758337590}
+  PV: {fileID: 0}
   ownerMaterialSlotIndex: 0
   healthbar: {fileID: 3511869268192224758}
   agent: {fileID: 2810587783769693676}
@@ -301,12 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21672d23f978b04c8431ad167b4678e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraHolder: {fileID: 0}
-  mouseSensitivity: 0
-  sprintSpeed: 0
-  walkSpeed: 0
-  jumpForce: 0
-  smoothTime: 0
+  PV: {fileID: 0}
 --- !u!114 &6853616454147329762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +323,9 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 2876063312457141707}
+  - {fileID: -2314510730240512452}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -345,6 +345,41 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!95 &-3992355367758337590
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 84561de1d4975174bbedb623d8aebf88, type: 3}
+  m_Controller: {fileID: 9100000, guid: a8c1be25f8312e94585a63e96f2d7a43, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-5472975588786584665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893885829384556338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
 --- !u!1001 &612669497
 PrefabInstance:
   m_ObjectHideFlags: 0
