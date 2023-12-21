@@ -6,9 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using static UnityEngine.UI.GridLayoutGroup;
 using UnityEngine.UIElements;
-using System;
 
-[Serializable]
 public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
 {
     [SerializeField]

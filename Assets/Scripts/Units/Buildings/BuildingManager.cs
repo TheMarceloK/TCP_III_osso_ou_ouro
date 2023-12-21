@@ -1,10 +1,7 @@
 ﻿using Photon.Pun;
-using System;
-using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-[Serializable]
 public class BuildingManager : UnitManager
 {
     public AudioSource ambientSource;
@@ -19,14 +16,6 @@ public class BuildingManager : UnitManager
     }
     private int _nCollisions = 0;
 
-    //[PunRPC]
-    //public void teste(string valor)
-    //{
-        
-    //        string teste = JsonUtility.ToJson(this);
-
-    //    _building = JsonUtility.FromJson<Building>(valor);
-    //}
     private void OnTriggerEnter(Collider other)
     {
         if (

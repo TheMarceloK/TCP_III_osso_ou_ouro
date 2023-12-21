@@ -10,7 +10,6 @@ public enum BuildingPlacement
     FIXED
 };
 
-[System.Serializable]
 public class Building : Unit
 {
 
@@ -199,10 +198,10 @@ public class Building : Unit
     }
 
     public int ConstructionHP { get => _constructionHP; }
-    public List<CharacterManager> Constructors { get => _constructors; set { _constructors = value; } }
-    public bool HasConstructorsFull { get => _constructors.Count == 3;set { } }
-    public bool HasValidPlacement { get => _placement == BuildingPlacement.VALID; set { } }
-    public bool IsFixed { get => _placement == BuildingPlacement.FIXED; set { } }
+    public List<CharacterManager> Constructors { get => _constructors; }
+    public bool HasConstructorsFull { get => _constructors.Count == 3; }
+    public bool HasValidPlacement { get => _placement == BuildingPlacement.VALID; }
+    public bool IsFixed { get => _placement == BuildingPlacement.FIXED; }
     public override bool IsAlive { get => _isAlive; }
     public int DataIndex
     {
@@ -213,6 +212,5 @@ public class Building : Unit
                     return i;
             return -1;
         }
-        set { }
     }
 }
