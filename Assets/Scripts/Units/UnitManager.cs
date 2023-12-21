@@ -1,8 +1,9 @@
 ﻿using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using UnityEngine;
-using static UnityEngine.UI.CanvasScaler;
+
 
 [RequireComponent(typeof(BoxCollider))]
 public class UnitManager : MonoBehaviour
@@ -66,10 +67,23 @@ public class UnitManager : MonoBehaviour
         );
     }
     //[PunRPC]
-    public void Initialize(Unit unit)
+    //public void Initialize(Unit unit)
+    //{
+    //    //Debug.Log(valor);
+    //    Unit = unit; //JsonUtility.FromJson<Unit>(valor);
+    //    Debug.Log(Unit);
+    //    Debug.Log(Unit.Uid);
+    //    unit.playerController = FindObjectOfType<PlayerController>();
+    //    Debug.Log($"{PV}: {Unit}");
+    //}
+    [PunRPC]
+    public void Initialize(string valor)
     {
-        Unit = unit;
-        unit.playerController = FindObjectOfType<PlayerController>();
+        Debug.Log(valor);
+        Unit = JsonConvert.DeserializeObject<Unit>(valor);
+        Debug.Log(Unit);
+        Debug.Log(Unit.Uid);
+        Unit.playerController = FindObjectOfType<PlayerController>();
         Debug.Log($"{PV}: {Unit}");
     }
 

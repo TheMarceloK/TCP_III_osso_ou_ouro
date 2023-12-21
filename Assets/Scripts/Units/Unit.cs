@@ -3,6 +3,8 @@ using System.Linq;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UIElements;
+using System;
+using Newtonsoft.Json;
 
 public struct UnitLevelUpData
 {
@@ -25,6 +27,7 @@ public struct UnitLevelUpData
     }
 }
 
+[System.Serializable]
 public class Unit
 {
     public static Dictionary<int, List<Unit>> UNITS_BY_OWNER;
@@ -82,7 +85,9 @@ public class Unit
 
         //g.GetComponent<PlayerController>().PV.RPC("Initialize", RpcTarget.AllBuffered, owner, this);
         //g.GetComponent<PlayerController>().Initialize(owner, (Building) this);
-        _transform.GetComponent<UnitManager>().Initialize(this);
+        //_transform.GetComponent<UnitManager>().Initialize(this);
+        _transform.GetComponent<UnitManager>().PV.RPC("Initialize",RpcTarget.All, JsonConvert.SerializeObject(this));
+        _transform.GetComponent<UnitManager>().PV.RPC("Initialize",RpcTarget.All, this);
         _transform.GetComponent<UnitManager>().PV.RPC("SetOwnerMaterial",RpcTarget.AllBuffered,owner);
         //_transform.GetComponent<UnitManager>().Initialize(this);
         _transform.GetComponent<UnitManager>().PV.RPC("RPCInitialize", RpcTarget.AllBuffered);
@@ -288,19 +293,19 @@ public class Unit
     }
 
     public string Uid { get => _uid; set { _uid = value; } }
-    public UnitData Data { get => _data; }
-    public string Code { get => _data.code; }
-    public Transform Transform { get => _transform; }
+    public UnitData Data { get => _data; set { _data = value; } }
+    public string Code { get => _data.code; set { _data.code = value; } }
+    public Transform Transform { get => _transform; set { _transform = value; } }
     public int HP { get => _currentHealth; set => _currentHealth = value; }
-    public int MaxHP { get => _data.healthpoints; }
+    public int MaxHP { get => _data.healthpoints; set { _data.healthpoints = value; } }
     public int Level { get => _level; set { _level = value; } }
-    public bool LevelMaxedOut { get => _levelMaxedOut; }
-    public UnitLevelUpData LevelUpData { get => _levelUpData; }
-    public Dictionary<InGameResource, int> Production { get => _production; }
-    public List<SkillManager> SkillManagers { get => _skillManagers; }
-    public int Owner { get => _owner; }
+    public bool LevelMaxedOut { get => _levelMaxedOut; set { _levelMaxedOut = value; } }
+    public UnitLevelUpData LevelUpData { get => _levelUpData; set { _levelUpData = value; } }
+    public Dictionary<InGameResource, int> Production { get => _production; set { _production = value; } }
+    public List<SkillManager> SkillManagers { get => _skillManagers; set { _skillManagers = value; } }
+    public int Owner { get => _owner; set { _owner = value; } }
     public int AttackDamage { get => _attackDamage; set { _attackDamage = value; } }
     public float AttackRange { get => _attackRange; set { _attackRange = value; } }
 
-    public virtual bool IsAlive { get => true; }
+    public virtual bool IsAlive { get => true;  }
 }
