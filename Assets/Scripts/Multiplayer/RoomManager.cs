@@ -50,18 +50,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
     // inserir aqui todas as chamadas que o jogador faça.
 
     //trigger de skill
-    public void TriggerSkill(Unit caller, int index, GameObject target = null)
-    {if (PV.IsMine)
-        {
-            //Debug.Log(caller);
-            //caller.PV.RPC("RPCTriggerSkill", RpcTarget.All, index, target);
-            PV.RPC("teste", RpcTarget.All);
-        }
-    }
 
-    [PunRPC]
-    public void teste()
-    {
-        Debug.Log("teste");
-    }
+
 }

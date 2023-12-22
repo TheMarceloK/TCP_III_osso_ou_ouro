@@ -55,7 +55,8 @@ public class BuildingPlacer : MonoBehaviour
                 Globals.TERRAIN_LAYER_MASK
             ))
             {
-                _placedBuilding.playerController.PV.RPC("SetPosition", RpcTarget.AllBuffered, _raycastHit.point);
+                //_placedBuilding.playerController.PV.RPC("SetPosition", RpcTarget.AllBuffered, _raycastHit.point);
+                _placedBuilding.playerController.SetPosition(_raycastHit.point);
                 if (_lastPlacementPosition != _raycastHit.point)
                 {
                     _placedBuilding.CheckValidPlacement();
@@ -71,6 +72,8 @@ public class BuildingPlacer : MonoBehaviour
                 !EventSystem.current.IsPointerOverGameObject()
             )
             {
+                //if (!_placedBuilding.playerController.PV.IsMine)
+                //_placedBuilding.playerController.PV.RPC("SetPosition", RpcTarget.AllBuffered, _raycastHit.point);
                 _PlaceBuilding();
             }
 

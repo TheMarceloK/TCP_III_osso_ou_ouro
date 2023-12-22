@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public Minimap minimapScript;
     public BoxCollider mapWrapperCollider;
     public int terrainSize;
-    private const float _TERRAIN_MID_HEIGHT = 30f;
+    private const float _TERRAIN_MID_HEIGHT = -75f;
 
     [HideInInspector]
     public bool gameIsPaused;
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
        
         float p = terrainSize / 2;
 
-        minimapAnchor.position = new Vector3(p, 30, p);
+        minimapAnchor.position = new Vector3(p, 100, p);
         minimapCamera.orthographicSize = p;
         mapWrapperCollider.center = new Vector3(0, _TERRAIN_MID_HEIGHT, 0);
         mapWrapperCollider.size = new Vector3(b.size.x, 1f, b.size.z);

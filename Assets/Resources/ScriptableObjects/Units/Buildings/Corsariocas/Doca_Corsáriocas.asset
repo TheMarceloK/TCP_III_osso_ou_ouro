@@ -21,7 +21,7 @@ MonoBehaviour:
   cost:
   - code: 0
     amount: 300
-  canProduce: 
+  canProduce: 00000000
   skills:
   - {fileID: 11400000, guid: f3c25e408f2d26e4f83eb8b8d3ae7ce9, type: 2}
   fieldOfView: 40

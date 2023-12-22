@@ -148,7 +148,6 @@ public class Building : Unit
             _buildingManager.ambientSource.Play();
         }
     }
-
     public void RemoveConstructor(int index)
     {
         CharacterBT bt = _constructors[index].GetComponent<CharacterBT>();

@@ -143,7 +143,7 @@ public class CameraManager : MonoBehaviour
     private void _Zoom(int zoomDir)
     {
         _camera.orthographicSize += zoomDir * Time.deltaTime * zoomSpeed;
-        _camera.orthographicSize = Mathf.Clamp(_camera.orthographicSize, 7f, 12f);
+        _camera.orthographicSize = Mathf.Clamp(_camera.orthographicSize, 6f, 15f);
 
         (Vector3 minWorldPoint, Vector3 maxWorldPoint) = Utils.GetCameraWorldBounds();
         _camOffset = transform.position - (maxWorldPoint + minWorldPoint) / 2f;

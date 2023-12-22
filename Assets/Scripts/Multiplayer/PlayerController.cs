@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IPunObservable
 
 
     }
-
     [PunRPC]
     public void SetPosition(Vector3 position)
     {
